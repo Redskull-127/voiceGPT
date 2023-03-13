@@ -13,6 +13,18 @@
     "eslint-config-next": "13.2.4",
     "next": "13.2.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-speech-kit": "^3.0.1",
+    "react-speech-recognition": "^3.10.0",
+    "regenerator-runtime": "^0.13.11",
+    "text-to-speech-js": "^1.1.10"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.21.0",
+    "@babel/runtime": "^7.21.0",
+    "@types/regenerator-runtime": "^0.13.1",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7"
   }
 }
