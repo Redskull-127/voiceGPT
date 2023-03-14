@@ -86,13 +86,14 @@ export default function HomePage() {
                             speak({ text: answer })
                         }, 1000)
 
-                        const mongoData = {}
-                        mongoData.question = value
-                        mongoData.text = answer
-                        fetch(`https://backend-task-j46c.onrender.com/question=${mongoData.question}/ans=${mongoData.text}`, {
+                        fetch(`https://backend-task-j46c.onrender.com/all`, {
                             method: "POST",
                             headers: new Headers({
                                 "Content-Type": "application/json",
+                            }),
+                            body: JSON.stringify({
+                                question: value,
+                                ans: answer
                             })
                         }).then((res) => console.log(res))
                         
