@@ -2,7 +2,7 @@
 
 export default async function getRes(question) {
     console.log("question", question);
-    await fetch("https://meer-chatgpt.onrender.com/", {
+    await fetch("http://localhost:5000/", {
         method: "POST",
         headers: new Headers({
             "Content-Type": "application/json",

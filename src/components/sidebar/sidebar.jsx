@@ -1,6 +1,8 @@
 import Image from "next/image"
+import {useRouter} from "next/router"
 
 export default function Sidebar() {
+    const router = useRouter()
     return (
         <div className="w-full flex h-full">
             <ul className="my-5 flex flex-col gap-2 mx-7">
@@ -12,7 +14,9 @@ export default function Sidebar() {
                     <Image src="/Icons/micblack.svg" height={0} width={20} alt="text" />
                     <p className="font-medium text-xl">Voice Chat</p>
                 </li>
-                <li className="transition-all duration-300 flex gap-3 hover:bg-primary px-2 py-4 rounded-lg hover:text-white hover:cursor-pointer select-none">
+                <li onClick={() => {
+                    router.push('/alldata')
+                }} className="transition-all duration-300 flex gap-3 hover:bg-primary px-2 py-4 rounded-lg hover:text-white hover:cursor-pointer select-none">
                     <Image src="/Icons/timeblack.svg" height={0} width={20} alt="text" />
                     <p className="font-medium text-xl">Previous Chat</p>
                 </li>
